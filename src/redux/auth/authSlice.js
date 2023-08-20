@@ -7,12 +7,7 @@ const initialState = {
   isLoggedIn: false,
   isRefreshing: false,
   error: null,
-  //   isLoading: false,
 };
-
-// const handlePending = state => {
-//   state.isLoading = true;
-// };
 
 const handleRejected = (state, action) => {
   state.isLoading = false;
@@ -23,34 +18,30 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   extraReducers: {
-    // [register.pending],
     [register.fulfilled](state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
-      // state.isLoading = false;
+
       console.log('TOKEN REGISTER', state.token);
       console.log('STATE REGISTER', state);
     },
     [register.rejected]: handleRejected,
 
-    // [logIn.pending]: handlePending,
     [logIn.fulfilled](state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
-      // state.isLoading = false;
+
       console.log('TOKEN LOGIN', state.token);
       console.log('STATE LOGIN', state);
     },
     [logIn.rejected]: handleRejected,
 
-    // [logOut.pending]: handlePending,
     [logOut.fulfilled](state, action) {
       state.user = { name: null, email: null };
       state.token = null;
       state.isLoggedIn = false;
-      // state.isLoading = false;
     },
     [logOut.rejected]: handleRejected,
 

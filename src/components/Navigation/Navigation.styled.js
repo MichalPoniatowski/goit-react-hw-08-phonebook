@@ -12,7 +12,7 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  // padding: 8px 0;
+  padding: 8px 0;
 
   border-bottom: 1px solid black;
 
@@ -28,6 +28,7 @@ export const Header = styled.header`
 
 export const Link = styled(NavLink)`
   padding: 8px 16px;
+  margin: 0;
   border-radius: 4px;
   text-decoration: none;
   color: black;

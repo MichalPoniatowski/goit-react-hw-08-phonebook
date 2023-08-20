@@ -31,8 +31,8 @@ export const UserInfo = styled.div`
 `;
 
 export const StyledLink = styled(NavLink)`
-  //   padding: 8px 16px;
-  margin: 0; /* Usunięcie wszelkich marginesów */
+  padding: 8px 16px;
+  margin: 0;
   border-radius: 4px;
   text-decoration: none;
   color: black;
