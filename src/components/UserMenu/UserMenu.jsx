@@ -7,7 +7,7 @@ import {
   UserButton,
   UserMenuContainer,
   UserInfo,
-} from './UserMenu.styled'; // Zaimportuj nowe style
+} from './UserMenu.styled';
 
 export const UserMenu = () => {
   const user = useSelector(userName);
@@ -28,5 +28,3 @@ export const UserMenu = () => {
     </UserMenuContainer>
   );
 };
-
-// export default UserMenu;

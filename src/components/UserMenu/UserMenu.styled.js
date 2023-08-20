@@ -18,7 +18,6 @@ export const UserButton = styled.button`
   color: white;
   font-weight: 500;
   cursor: pointer;
-  margin-left: 8px;
 
   &:hover {
     background-color: orangered;
@@ -32,7 +31,7 @@ export const UserInfo = styled.div`
 `;
 
 export const StyledLink = styled(NavLink)`
-  padding: 8px 16px;
+  //   padding: 8px 16px;
   margin: 0; /* Usunięcie wszelkich marginesów */
   border-radius: 4px;
   text-decoration: none;
