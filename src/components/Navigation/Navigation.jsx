@@ -1,5 +1,5 @@
-import React, { Suspense, useEffect, useState } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import {
@@ -14,18 +14,6 @@ import { UserMenu } from '../UserMenu';
 
 export const Navigation = () => {
   const userIsLogged = useSelector(isUserLoged);
-  const navigate = useNavigate();
-  const [hasRedirected, setHasRedirected] = useState(false);
-
-  useEffect(() => {
-    if (userIsLogged && !hasRedirected) {
-      navigate('/contacts');
-      setHasRedirected(true);
-    }
-    if (!userIsLogged) {
-      setHasRedirected(false);
-    }
-  }, [userIsLogged, navigate, hasRedirected]);
 
   return (
     <Container>

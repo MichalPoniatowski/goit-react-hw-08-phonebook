@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 import { logOut } from '../../redux/auth/actions';
 import { userName } from '../../redux/auth/selectors';
-
 import {
   StyledLink,
   UserButton,
@@ -11,11 +12,12 @@ import {
 
 export const UserMenu = () => {
   const user = useSelector(userName);
-
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     dispatch(logOut());
+    navigate('/');
   };
 
   return (
